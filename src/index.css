@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.active{
+    box-shadow: 0 2px rgb(14 165 233 / var(--tw-text-opacity));;
+}
+.highlight{
+    color:rgb(14 165 233 / var(--tw-text-opacity));
+}
