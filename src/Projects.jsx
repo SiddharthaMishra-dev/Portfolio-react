@@ -34,7 +34,7 @@ function Project(){
                             <h5 className="text-sky-600 font-bold text-2xl items-center">URL shortner</h5>
                             <span>URL shortner build using expressjs and uses gotiny shortner API to convert the link to short links.</span>
 
-                            <a href="https://github.com/SiddharthaMishra-dev/india-around" className="" target="_blank">
+                            <a href="https://github.com/SiddharthaMishra-dev/URL-Shortnerd" className="" target="_blank">
                                 <FaGithub className="mt-5 text-3xl hover:text-sky-200 md:me-auto" />
                             </a>
                         </div>
@@ -48,7 +48,7 @@ function Project(){
                             <h5 className="text-sky-600 font-bold text-2xl items-center">Sticky</h5>
                             <span>Sticky is note taking webapp with user authentication and database.Build using reactjs and firebase for backend.</span>
 
-                            <a href="https://github.com/SiddharthaMishra-dev/india-around" target="_blank">
+                            <a href="https://github.com/SiddharthaMishra-dev/todo-firebase-react" target="_blank">
                                 <FaGithub className="mt-5 text-3xl hover:text-sky-200 md:ms-auto" />
                             </a>
                         </div>
