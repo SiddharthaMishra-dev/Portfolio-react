@@ -15,7 +15,7 @@ const experience=[
         designation:"Reactjs Intern",
         company:"Brainlox",
         tenure:"march 2023 - present",
-        description:"Organise Events to increase API Literacy in Faculty of Engineering and Technology University of Lucknow"
+        description:"Built new react components in brainlox.ai website.Work with nextjs website. Also integrate API to the frontend"
     },{
         id:3,
         designation:"Frontend Intern",

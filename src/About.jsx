@@ -76,10 +76,9 @@ function About(){
                     <ul className="flex gap-5 p-5">
                         <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href="https://twitter.com/raiderfreed"><FaTwitter/></a></li>
                         <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href="https://www.linkedin.com/in/siddhartha-mishra-628282203/"><FaLinkedin/></a></li>
-                        {/* <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href=""><FaInstagram/></a></li> */}
                     </ul>
                     <div className="bg-sky-500 hover:bg-sky-600 p-4 m-5 rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
-                        <h4 className="text-xl ">Mail me</h4>
+                        <h4 className="text-xl "><a href="mailto:mailbox.siddharthamishra@gmail.com?body=Add your body here">Mail me</a></h4>
                     </div>
                 </div>
             </div>
