@@ -32,10 +32,12 @@ function About(){
             </div>
 
             <div className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 bg-slate-800 rounded-md">
-                <h3 className="text-5xl text-center m-5 ">Tech I use</h3>
+                <h3 className="text-5xl text-center m-5"><span className="active">Tech I use</span></h3>
                 <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
                     <div>
-                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><IoLogoJavascript/></div>
+                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                            <IoLogoJavascript/>
+                        </div>
                         <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaBootstrap/></div>
                         <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaReact/></div>
                     </div>
@@ -53,7 +55,7 @@ function About(){
                         {
                             experience.map((job,index1)=>{
                                 return(
-                                    <p key={index1} onClick={()=>handleChange(job.id)} className={`p-1 text-lg cursor-pointer hover:text-sky-500 ${job.id === index && 'active'}`}>
+                                    <p key={index1} onClick={()=>handleChange(job.id)} className={`p-1 text-xl cursor-pointer hover:text-sky-500 ${job.id === index && 'active'}`}>
                                         {job.company}
                                     </p>
                                 )
@@ -61,7 +63,7 @@ function About(){
                         }
                     </div >
                     <div className="job-item p-5 bg-slate-800 rounded-md mt-5">
-                        <p className="text-2xl text-sky-500 font-bold shadow-2xl"><span className="text-gray-200">{experience[index].designation}</span> @{experience[index].company}</p>
+                        <p className="text-2xl text-sky-500 font-bold"><span className="text-gray-200">{experience[index].designation}</span> @{experience[index].company}</p>
                         <p className="mt-2 text-gray-400">{experience[index].tenure}</p>
                         <article className="mt-2">
                             {experience[index].description}
@@ -70,7 +72,7 @@ function About(){
             </div>
 
             <div className="connect text-gray-200 p-10  mb-32"> 
-                <h3 className="text-5xl text-center m-5">Connect with me</h3>
+                <h3 className="text-5xl text-center m-5"><span className="active">Connect with me</span></h3>
                 <div className="follow flex flex-col items-center">
                     <p className="p-5 text-slate-400">Follow me on </p>
                     <ul className="flex gap-5 p-5">

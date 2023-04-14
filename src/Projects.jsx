@@ -10,7 +10,7 @@ function Project(){
         <div className='m-0 w-full h-screen flex flex-col justify-between'>
             <Nav/>
             <div className="text-gray-200">
-                <h2 className=" text-3xl text-center m-10">I have made these</h2>
+                <h2 className=" text-3xl text-center m-10"><span className="active p-1">I have built these</span></h2>
                 <div className="flex flex-col justify-center items-center">
                     <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex items-center md:w-3/4 ">
                         <div className="bg-sky-500 md:w-4/5">
@@ -52,11 +52,7 @@ function Project(){
                                 <FaGithub className="mt-5 text-3xl hover:text-sky-200 md:ms-auto" />
                             </a>
                         </div>
-                    </div>
-
-                   
-
-                    
+                    </div>                   
                   
 
                 </div>
