@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import Profile from './assets/Profile.jpg'
-import Nav from "./Nav";
-import Footer from "./Footer";
+// import Profile from './assets/Profile.jpg'
+import Profile from '../assets/Profile.jpg'
+// import Nav from "../Nav";
+import Nav from '../components/Nav'
+import Footer from "../components/Footer";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import experience from "./data";
+import experience from "../utils/data";
 import {FaTwitter ,FaLinkedin,FaInstagram,FaReact,FaBootstrap,FaNodeJs} from 'react-icons/fa'
 import {IoLogoJavascript} from 'react-icons/io'
 import {SiTailwindcss,SiExpress} from 'react-icons/si'

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import About from './About'
-import Project from './Projects'
+import About from './pages/About'
+import Project from './pages/Projects'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 
 

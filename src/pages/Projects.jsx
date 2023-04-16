@@ -1,9 +1,9 @@
 import React from "react";
-import indiaAround from './assets/india-around.png'
-import sticky from './assets/sticky.png'
-import urlshortner from  './assets/URL-shortner.png'
-import Nav from "./Nav";
-import Footer from "./Footer";
+import indiaAround from '../assets/india-around.png'
+import sticky from '../assets/sticky.png'
+import urlshortner from  '../assets/URL-shortner.png'
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import {FaGithub} from 'react-icons/fa'
 function Project(){
     return (

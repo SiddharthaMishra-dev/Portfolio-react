@@ -3,7 +3,7 @@ const experience=[
         company:"Postman",
         designation:"Postman Student Leader",
         tenure:"January 2023 - Present",
-        description:"Organise Events to increase API Literacy in Faculty of Engineering and Technology University of Lucknow.Hosted API 101 session online in which students learn about API's and got handson working with Postman and how to test particular API",
+        description:"Organise Events to increase API Literacy in Faculty of Engineering and Technology University of Lucknow.Hosted API 101 session online in which students learn about API's and got handson working with Postman and how to test particular API.",
         image:""
     },{
         id:1,
@@ -18,14 +18,14 @@ const experience=[
         company:"Brainlox",
         tenure:"March 2023 - present",
         image:"",
-        description:"Built new react components in brainlox.ai website.Work with nextjs website. Also integrate API to the frontend of the website to establish proper flow of data. Built components that fetches data from the API and dynamically changes data in the website"
+        description:"Built new react components in brainlox.ai website.Work with nextjs website. Also integrate API to the frontend of the website to establish proper flow of data. Built components that fetches data from the API and dynamically changes data in the website."
     },{
         id:3,
         designation:"Frontend Intern",
         company:"EVE",
         tenure:"February 2023 - March 2023",
         image:"",
-        description:"Work on React website and production website . Design various pages of the websites. Opt best practices to increase SEO"
+        description:"Work on React website and live production website . Design various pages of the websites. Opt best practices to increase SEO and faster reloading of the pages. My job also includes checking the codes from other branches and merging in the main branch so that website doesn't break."
     }
 ]
 export default experience
