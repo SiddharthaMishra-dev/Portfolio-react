@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-// import Profile from './assets/Profile.jpg'
+import React, { useEffect, useRef, useState } from "react";
+import Typed from "typed.js";
 import Profile from '../assets/Profile.jpg'
-// import Nav from "../Nav";
 import Nav from '../components/Nav'
 import Footer from "../components/Footer";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import experience from "../utils/data";
 import {FaTwitter ,FaLinkedin,FaInstagram,FaReact,FaBootstrap,FaNodeJs} from 'react-icons/fa'
 import {IoLogoJavascript} from 'react-icons/io'
@@ -16,6 +14,19 @@ function About(){
     const handleChange=(id)=>{
         setIndex(id)
     }
+    const desc=useRef(null)
+    useEffect(()=>{
+        const typed=new Typed(desc.current,{
+            strings:['Pre final student','Frontend web developer'],
+            typeSpeed:30,
+            loop: true,
+            loopCount:1,
+            backSpeed:20,
+        })
+        return ()=>{
+            typed.destroy();
+        }
+    },[])
     return (
         <div className='m-0 w-full h-screen flex flex-col justify-between'>
             <Nav/>
@@ -24,7 +35,7 @@ function About(){
                 <div className="side-content p-10">
                     <h4 className="text-2xl">Hey!</h4>
                     <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
-                    <p className="text-gray-500 text-3xl mt-4">Pre Final year student</p>
+                    <p className="text-gray-500 text-3xl mt-5" ref={desc}/>
                     <div className="text-lg mt-4">
                         I am an undergraduate student with a passion for web development. Enjoy exploring new technologies 
                         and using them. Always eager to work and collaborate with senior and junior developers. Enthusiastic 

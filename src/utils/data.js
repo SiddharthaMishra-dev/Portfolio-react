@@ -3,7 +3,7 @@ const experience=[
         company:"Postman",
         designation:"Postman Student Leader",
         tenure:"January 2023 - Present",
-        description:"Organise Events to increase API Literacy in Faculty of Engineering and Technology University of Lucknow.Hosted API 101 session online in which students learn about API's and got handson working with Postman and how to test particular API.",
+        description:"Organise Events to increase API Literacy in Faculty of Engineering and Technology University of Lucknow.Hosted API 101 session online in which students learn about API's and got handson working with Postman and how to test particular API.1",
         image:""
     },{
         id:1,
