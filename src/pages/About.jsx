@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
+import Fade from 'react-reveal/Fade';
 import Profile from '../assets/Profile.jpg'
 import Nav from '../components/Nav'
 import Footer from "../components/Footer";
@@ -48,16 +49,20 @@ function About(){
                 <h3 className="text-5xl text-center m-5"><span className="active">Tech I use</span></h3>
                 <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
                     <div>
-                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                            <IoLogoJavascript/>
-                        </div>
-                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaBootstrap/></div>
-                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaReact/></div>
+                        <Fade left>
+                            <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                                <IoLogoJavascript/>
+                            </div>
+                            <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaBootstrap/></div>
+                            <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaReact/></div>
+                        </Fade>
                     </div>
                     <div>
-                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><SiTailwindcss/></div>
-                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><SiExpress/></div>
-                        <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaNodeJs/></div>
+                        <Fade right>
+                            <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><SiTailwindcss/></div>
+                            <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><SiExpress/></div>
+                            <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaNodeJs/></div>
+                        </Fade>
                     </div>
                 </div>
             </div>
@@ -91,7 +96,7 @@ function About(){
                     <ul className="flex gap-5 p-5">
                         <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href="https://twitter.com/raiderfreed"><FaTwitter/></a></li>
                         <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href="https://www.linkedin.com/in/siddhartha-mishra-628282203/"><FaLinkedin/></a></li>
-                        <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href="https://instagram.com/malicious_sidmishra?igshid=YmMyMTA2M2Y=" target="_blank"><FaInstagram/></a></li>
+                        <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href="https://www.instagram.com/sid_mishra19/" target="_blank"><FaInstagram/></a></li>
 
                     </ul>
                     <div className="bg-sky-500 hover:bg-sky-600 p-4 m-5 rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
