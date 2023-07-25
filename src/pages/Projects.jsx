@@ -6,10 +6,19 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import {FaGithub} from 'react-icons/fa'
 import Fade from 'react-reveal/Fade';
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import particlesConfig from "../config/particlesConfig";
 
 function Project(){
+    const particlesInit = async (main) => {
+        console.log(main);
+        await loadFull(main);
+      };
     return (
-        <div className='m-0 w-full h-screen flex flex-col justify-between'>
+        <div className='relative m-0 w-full h-screen flex flex-col justify-between'>
+        <Particles id="tsparticles" init={particlesInit} options={particlesConfig}/>
+
             <Nav/>
             <div className="text-gray-200">
                 <h2 className=" text-3xl text-center m-10"><span className="active p-1">I have built these</span></h2>

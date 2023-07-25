@@ -10,6 +10,9 @@ import {FaTwitter ,FaLinkedin,FaInstagram,FaReact,FaBootstrap,FaNodeJs} from 're
 import {IoLogoJavascript} from 'react-icons/io'
 import {SiTailwindcss,SiExpress} from 'react-icons/si'
 import 'react-tabs/style/react-tabs.css';
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import particlesConfig from "../config/particlesConfig";
 
 function About(){
     const [index,setIndex] =useState(0)
@@ -18,6 +21,7 @@ function About(){
     }
     const desc=useRef(null)
     useEffect(()=>{
+     
         const typed=new Typed(desc.current,{
             strings:['Pre final student','Frontend web developer'],
             typeSpeed:30,
@@ -29,8 +33,14 @@ function About(){
             typed.destroy();
         }
     },[])
+    const particlesInit = async (main) => {
+        console.log(main);
+        await loadFull(main);
+      };
     return (
-        <div className='m-0 w-full h-screen flex flex-col justify-between'>
+        <>
+        <div className='relative m-0 w-full h-screen flex flex-col justify-between '>
+            <Particles id="tsparticles" init={particlesInit} options={particlesConfig}/>
             <Nav/>
             <Fade left>
                 <div className="md:flex bg-slate-800 text-gray-200 lg:w-3/4 m-auto rounded-md shadow-sm items-center md:text-left p-10 md:pt-10">
@@ -115,6 +125,7 @@ function About(){
 
             <Footer/>
         </div>
+        </>
     )
 }
 
