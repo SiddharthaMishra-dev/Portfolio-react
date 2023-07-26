@@ -1,7 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState,useCallback } from "react";
 import Typed from "typed.js";
-import Fade from 'react-reveal/Fade';
-import Jump from 'react-reveal/Jump';
 import Profile from '../assets/Profile.jpg'
 import Nav from '../components/Nav'
 import Footer from "../components/Footer";
@@ -10,10 +8,9 @@ import {FaTwitter ,FaLinkedin,FaInstagram,FaReact,FaBootstrap,FaNodeJs} from 're
 import {IoLogoJavascript} from 'react-icons/io'
 import {SiTailwindcss,SiExpress} from 'react-icons/si'
 import 'react-tabs/style/react-tabs.css';
-import Particles from "react-tsparticles";
+import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesConfig from "../config/particlesConfig";
-
 function About(){
     const [index,setIndex] =useState(0)
     const handleChange=(id)=>{
@@ -33,17 +30,19 @@ function About(){
             typed.destroy();
         }
     },[])
-    const particlesInit = async (main) => {
-        console.log(main);
-        await loadFull(main);
-      };
+    const particlesInit=useCallback(async engine=>{
+        console.log(engine)
+        await loadFull(engine)
+    })
+    const particlesLoaded = useCallback(async container => {
+        await console.log(container);
+    }, []);
     return (
         <>
-        <div className='relative m-0 w-full h-screen flex flex-col justify-between '>
-            <Particles id="tsparticles" init={particlesInit} options={particlesConfig}/>
+            <div className='relative m-0 w-full h-screen flex flex-col justify-between '>
+            <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particlesConfig}/>
             <Nav/>
-            <Fade left>
-                <div className="md:flex bg-slate-800 text-gray-200 lg:w-3/4 m-auto rounded-md shadow-sm items-center md:text-left p-10 md:pt-10">
+                <div style={{ zIndex: 10 }} className="md:flex text-gray-200 lg:w-3/4 m-auto rounded-md shadow-sm items-center md:text-left p-10 md:pt-10">
                     <img src={Profile} className="rounded-md m-auto" width="384" height="512" ></img>
                     <div className="side-content p-10">
                         <h4 className="text-2xl">Hey!</h4>
@@ -56,32 +55,26 @@ function About(){
                         </div>
                     </div>
                 </div>
-            </Fade>
-            <Fade right>
-                <div className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 bg-slate-800 rounded-md">
+            
+                <div style={{ zIndex: 10 }} className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md">
                     <h3 className="text-5xl text-center m-5"><span className="active">Tech I use</span></h3>
                     <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
                         <div>
-                            <Fade left>
                                 <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
                                     <IoLogoJavascript/>
                                 </div>
                                 <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaBootstrap/></div>
                                 <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaReact/></div>
-                            </Fade>
                         </div>
                         <div>
-                            <Fade right>
                                 <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><SiTailwindcss/></div>
                                 <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><SiExpress/></div>
                                 <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500"><FaNodeJs/></div>
-                            </Fade>
                         </div>
                     </div>
                 </div>
-            </Fade>
-            <Fade left>
-                <div className="experience text-gray-200 lg:w-3/4 m-auto  mb-32 rounded-md shadow-sm items-center md:text-left p-10 md:pt-10">
+            
+                <div style={{ zIndex: 10 }} className="experience text-gray-200 lg:w-3/4 m-auto  mb-32 rounded-md shadow-sm items-center md:text-left p-10 md:pt-10">
                     <h1 className="text-5xl text-center m-5">Experience</h1>
                         <div className="flex gap-5 justify-center p-0 md:p-5">
                             {
@@ -94,7 +87,7 @@ function About(){
                                 })
                             }
                         </div >
-                        <div className="job-item p-5 bg-slate-800 rounded-md mt-5">
+                        <div className="job-item p-5 rounded-md mt-5">
                             <p className="text-2xl text-sky-500 font-bold"><span className="text-gray-200">{experience[index].designation}</span> @{experience[index].company}</p>
                             <p className="mt-2 text-gray-400">{experience[index].tenure}</p>
                             <article className="mt-2">
@@ -102,9 +95,8 @@ function About(){
                             </article>
                         </div>
                 </div>
-            </Fade>
-            <Fade right>
-                <div className="connect text-gray-200 p-10  mb-32"> 
+            
+                <div style={{ zIndex: 10 }} className="connect text-gray-200 p-10  mb-32"> 
                     <h3 className="text-5xl text-center m-5"><span className="active">Connect with me</span></h3>
                     <div className="follow flex flex-col items-center">
                         <p className="p-5 text-slate-400">Follow me on </p>
@@ -114,15 +106,14 @@ function About(){
                             <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300"><a href="https://www.instagram.com/sid_mishra19/" target="_blank"><FaInstagram/></a></li>
 
                         </ul>
-                        <Jump>
+                        
                             <div className="bg-sky-500 hover:bg-sky-600 p-4 m-5 rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
                                 <h4 className="text-xl "><a href="mailto:mailbox.siddharthamishra@gmail.com?body=Add your body here">Mail me</a></h4>
                             </div>
-                        </Jump>
+                        
                     </div>
                 </div>
-            </Fade>
-
+            
             <Footer/>
         </div>
         </>
