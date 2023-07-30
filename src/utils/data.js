@@ -18,7 +18,7 @@ const experience=[
         company:"Brainlox",
         tenure:"March 2023 - Present",
         image:"",
-        description:"Built new react components in brainlox.ai website.Work with nextjs website. Also integrate API to the frontend of the website to establish proper flow of data. Built components that fetches data from the API and dynamically changes data in the website."
+        description:"Built new react components in brainlox.ai website.Work with nextjs website. Also integrate API to the frontend of the website to establish proper flow of data. Built components that fetches data from the API and dynamically changes data in the website. Work on ChatGPT plugin , building chat UI for API"
     },{
         id:3,
         designation:"Frontend Intern",
