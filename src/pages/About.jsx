@@ -26,7 +26,7 @@ function About() {
   const desc = useRef(null);
   useEffect(() => {
     const typed = new Typed(desc.current, {
-      strings:  ["Frontend web developer","Tech Enthusiast"],
+      strings: ["Frontend web developer", "Tech Enthusiast"],
       typeSpeed: 25,
       loop: true,
       loopCount: Infinity,
