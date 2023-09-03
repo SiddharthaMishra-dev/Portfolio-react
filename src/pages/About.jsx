@@ -37,12 +37,9 @@ function About() {
     };
   }, []);
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
     await loadFull(engine);
   });
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(async (container) => {}, []);
   return (
     <>
       <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
@@ -144,7 +141,7 @@ function About() {
 
         <div
           style={{ zIndex: 10 }}
-          className="connect text-gray-200 p-10  mb-32"
+          className="connect text-gray-200 p-10  mb-32  sm:w-full"
         >
           <h3 className="text-5xl text-center m-5">
             <span className="active">Connect with me</span>

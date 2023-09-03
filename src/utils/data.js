@@ -20,14 +20,23 @@ const experience = [
   {
     id: 2,
     designation: "Reactjs Intern",
+    company: "TechBRJ",
+    tenure: "July 2023 - Present",
+    image: "",
+    description:
+      "My day-to-day task include creating full frontend of the websites for the client. Build different components that fetches data from the API. I have to ensure that each API call should be made with proper error handling. Also , I have to optimize the websites with different React technologies for better performance.",
+  },
+  {
+    id: 3,
+    designation: "Reactjs Intern",
     company: "Brainlox",
-    tenure: "March 2023 - Present",
+    tenure: "March 2023 - July 2023",
     image: "",
     description:
       "Built new react components in brainlox.ai website.Work with nextjs website. Also integrate API to the frontend of the website to establish proper flow of data. Built components that fetches data from the API and dynamically changes data in the website. Work on ChatGPT plugin , building chat UI for API",
   },
   {
-    id: 3,
+    id: 4,
     designation: "Frontend Intern",
     company: "EVE",
     tenure: "February 2023 - March 2023",
