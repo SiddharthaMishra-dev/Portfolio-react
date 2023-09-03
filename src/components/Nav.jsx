@@ -21,6 +21,14 @@ function Nav() {
         >
           Projects
         </li>
+        <li
+          className={` cursor-pointer hover:text-sky-500`}
+          onClick={() => {
+            navigate("/blogs");
+          }}
+        >
+          Blogs
+        </li>
       </ul>
     </nav>
   );

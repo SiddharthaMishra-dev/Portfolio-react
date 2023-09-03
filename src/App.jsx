@@ -6,6 +6,7 @@ import Layout from "./Layout/Layout";
 
 const About = lazy(() => import("./pages/About"));
 const Project = lazy(() => import("./pages/Projects"));
+const Blog = lazy(() => import("./pages/Blogs"));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<About />} />
             <Route path="/projects" element={<Project />} />
+            <Route path="/blogs" element={<Blog />} />
           </Route>
         </Routes>
       </BrowserRouter>
