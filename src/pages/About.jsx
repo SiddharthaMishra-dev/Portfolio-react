@@ -3,7 +3,7 @@ import Typed from "typed.js";
 import Profile from "../assets/Profile.jpg";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import experience from "../utils/data";
+import Experience from "../components/Experience";
 import {
   FaTwitter,
   FaLinkedin,
@@ -18,11 +18,8 @@ import "react-tabs/style/react-tabs.css";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesConfig from "../config/particlesConfig";
+import Atropos from "atropos/react";
 function About() {
-  const [index, setIndex] = useState(0);
-  const handleChange = (id) => {
-    setIndex(id);
-  };
   const desc = useRef(null);
   useEffect(() => {
     const typed = new Typed(desc.current, {
@@ -50,28 +47,41 @@ function About() {
           options={particlesConfig}
         />
         <Nav />
-        <div
-          style={{ zIndex: 10 }}
-          className="md:flex text-gray-200 lg:w-3/4 m-auto rounded-md shadow-sm items-center md:text-left p-10 md:pt-10"
-        >
-          <img
-            src={Profile}
-            className="rounded-md m-auto"
-            width="384"
-            height="512"
-          ></img>
-          <div className="side-content p-10">
-            <h4 className="text-2xl">Hey!</h4>
-            <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
-            <p className="text-gray-500 text-3xl mt-5" ref={desc} />
-            <div className="text-lg mt-4">
-              I am an undergraduate student with a passion for web development.
-              Enjoy exploring new technologies and using them. Always eager to
-              work and collaborate with senior and junior developers.
-              Enthusiastic about learning and applying new technologies to
-              provide the best solution.
+        <div className="lg:w-3/4 mx-auto ">
+          <Atropos
+            activeOffset={4}
+            shadow={true}
+            shadowScale={0}
+            rotateXMax={3}
+            rotateYMax={3}
+            onEnter={() => console.log("Enter")}
+            onLeave={() => console.log("Leave")}
+          >
+            <div
+              data-atropos-offset="0"
+              style={{ zIndex: 10 }}
+              className="md:flex text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left p-10 md:pt-10"
+            >
+              <img
+                src={Profile}
+                className="rounded-md m-auto"
+                width="384"
+                height="512"
+              ></img>
+              <div className="side-content p-10">
+                <h4 className="text-2xl">Hey!</h4>
+                <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
+                <p className="text-gray-500 text-3xl mt-5" ref={desc} />
+                <div className="text-lg mt-4">
+                  I am an undergraduate student with a passion for web
+                  development. Enjoy exploring new technologies and using them.
+                  Always eager to work and collaborate with senior and junior
+                  developers. Enthusiastic about learning and applying new
+                  technologies to provide the best solution.
+                </div>
+              </div>
             </div>
-          </div>
+          </Atropos>
         </div>
 
         <div
@@ -107,37 +117,7 @@ function About() {
           </div>
         </div>
 
-        <div
-          style={{ zIndex: 10 }}
-          className="experience text-gray-200 lg:w-3/4 m-auto  mb-32 rounded-md shadow-sm items-center md:text-left p-10 md:pt-10"
-        >
-          <h1 className="text-5xl text-center m-5">Experience</h1>
-          <div className="flex gap-5 justify-center p-0 md:p-5">
-            {experience.map((job, index1) => {
-              return (
-                <p
-                  key={index1}
-                  onClick={() => handleChange(job.id)}
-                  className={`p-1 text-xl cursor-pointer hover:text-sky-500 ${
-                    job.id === index && "active"
-                  }`}
-                >
-                  {job.company}
-                </p>
-              );
-            })}
-          </div>
-          <div className="job-item p-5 rounded-md mt-5">
-            <p className="text-2xl text-sky-500 font-bold">
-              <span className="text-gray-200">
-                {experience[index].designation}
-              </span>{" "}
-              @{experience[index].company}
-            </p>
-            <p className="mt-2 text-gray-400">{experience[index].tenure}</p>
-            <article className="mt-2">{experience[index].description}</article>
-          </div>
-        </div>
+        <Experience />
 
         <div
           style={{ zIndex: 10 }}
