@@ -54,13 +54,13 @@ function About() {
             shadowScale={0}
             rotateXMax={3}
             rotateYMax={3}
-            onEnter={() => console.log("Enter")}
-            onLeave={() => console.log("Leave")}
+            highlight={false}
+            rotateTouch="scroll-y"
           >
             <div
               data-atropos-offset="0"
-              style={{ zIndex: 10 }}
-              className="md:flex text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left p-10 md:pt-10"
+              // style={{ zIndex: 10 }}
+              className="md:flex text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left md:pt-10"
             >
               <img
                 src={Profile}
@@ -116,8 +116,9 @@ function About() {
             </div>
           </div>
         </div>
-
-        <Experience />
+        <div className="w-full">
+          <Experience />
+        </div>
 
         <div
           style={{ zIndex: 10 }}

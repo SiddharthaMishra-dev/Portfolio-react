@@ -12,13 +12,13 @@ const Experience = () => {
       className="experience text-gray-200 lg:w-3/4 m-auto  mb-32 rounded-md shadow-sm items-center md:text-left p-10 md:pt-10"
     >
       <h1 className="text-5xl text-center m-5">Experience</h1>
-      <div className="flex gap-5 justify-center p-0 md:p-5">
+      <div className="w-full overflow-auto flex gap-5 justify-center p-0 md:p-5">
         {experience.map((job, index1) => {
           return (
             <p
               key={index1}
               onClick={() => handleChange(job.id)}
-              className={`p-1 text-xl cursor-pointer hover:text-sky-500 ${
+              className={`p-1 text-xl cursor-pointer hover:text-sky-500  ${
                 job.id === index && "active"
               }`}
             >
