@@ -1,7 +1,7 @@
 import React from "react";
 import { useCallback } from "react";
 import indiaAround from "../assets/india-around.png";
-import sticky from "../assets/sticky.png";
+// import sticky from "../assets/sticky.png";
 import urlshortner from "../assets/URL-shortner.png";
 import shopKaro from "../assets/ShopKaro.png";
 import Nav from "../components/Nav";
@@ -118,7 +118,7 @@ function Project() {
               </div>
             </div>
 
-            <div className="rounded-md mt-10 m-10  shadow-2xl  md:flex items-center md:w-3/4 ">
+            {/* <div className="rounded-md mt-10 m-10  shadow-2xl  md:flex items-center md:w-3/4 ">
               <div className="bg-sky-500 md:w-4/5">
                 <img
                   src={sticky}
@@ -141,7 +141,7 @@ function Project() {
                   <FaGithub className="mt-5 text-3xl hover:text-sky-200 md:ms-auto" />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <Footer />
