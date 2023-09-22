@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Typed from "typed.js";
+import { useSpring } from "@react-spring/web";
 import Profile from "../assets/Profile.jpg";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
@@ -19,9 +20,17 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesConfig from "../config/particlesConfig";
 import Atropos from "atropos/react";
+import { Parallax } from "react-scroll-parallax";
 function About() {
+  const [isVisible, setVisible] = useState(false);
   const desc = useRef(null);
+  const props = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1000 },
+  });
   useEffect(() => {
+    setTimeout(() => setVisible(true), 5000);
     const typed = new Typed(desc.current, {
       strings: ["Frontend web developer", "Tech Enthusiast"],
       typeSpeed: 25,
@@ -92,31 +101,36 @@ function About() {
             <span className="active">Tech I use</span>
           </h3>
           <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
-            <div>
-              <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                <IoLogoJavascript />
+            <Parallax speed={10}>
+              <div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <IoLogoJavascript />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <FaBootstrap />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <FaReact />
+                </div>
               </div>
-              <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                <FaBootstrap />
+            </Parallax>
+            <Parallax speed={10}>
+              <div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <SiTailwindcss />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <SiExpress />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <FaNodeJs />
+                </div>
               </div>
-              <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                <FaReact />
-              </div>
-            </div>
-            <div>
-              <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                <SiTailwindcss />
-              </div>
-              <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                <SiExpress />
-              </div>
-              <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                <FaNodeJs />
-              </div>
-            </div>
+            </Parallax>
           </div>
         </div>
-        <div className="w-full">
+
+        <div className="w-full" style={props}>
           <Experience />
         </div>
 

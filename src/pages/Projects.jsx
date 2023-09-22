@@ -38,11 +38,11 @@ function Project() {
             className="flex flex-col justify-center items-center"
           >
             <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex flex-row-reverse items-center md:w-3/4 ">
-              <div className="bg-sky-500 md:w-4/5">
+              <div className="bg-sky-500 max-w-lg md:w-full">
                 <img
                   src={shopKaro}
                   alt=""
-                  className="w-full opacity-60 hover:opacity-100"
+                  className="w-full  opacity-60 hover:opacity-100"
                 />
               </div>
               <div className="pt-2 p-4 md:text-left">
@@ -65,7 +65,7 @@ function Project() {
               </div>
             </div>
             <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex items-center md:w-3/4 ">
-              <div className="bg-sky-500 md:w-4/5">
+              <div className="bg-sky-500 max-w-lg md:full">
                 <img
                   src={indiaAround}
                   alt=""
@@ -92,7 +92,7 @@ function Project() {
             </div>
 
             <div className="rounded-md mt-10 m-10  shadow-2xl    md:flex flex-row-reverse items-center md:w-3/4">
-              <div className="bg-sky-500 md:w-4/5">
+              <div className="bg-sky-500 max-w-lg md:w-full">
                 <img
                   src={urlshortner}
                   alt=""
