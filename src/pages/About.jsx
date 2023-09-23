@@ -5,6 +5,8 @@ import Profile from "../assets/Profile.jpg";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Experience from "../components/Experience";
+import { Slide } from "react-awesome-reveal";
+
 import {
   FaTwitter,
   FaLinkedin,
@@ -49,13 +51,13 @@ function About() {
   return (
     <>
       <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
-        <Particles
+        {/* <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}
           options={particlesConfig}
-        />
-        <Nav />
+        /> */}
+        {/* <Nav i={i} handleChangeI={handleChangeI} /> */}
         <div className="lg:w-3/4 mx-auto ">
           <Atropos
             activeOffset={4}
@@ -92,87 +94,90 @@ function About() {
             </div>
           </Atropos>
         </div>
-
-        <div
-          style={{ zIndex: 10 }}
-          className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md"
-        >
-          <h3 className="text-5xl text-center m-5">
-            <span className="active">Tech I use</span>
-          </h3>
-          <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
-            <Parallax speed={10}>
-              <div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <IoLogoJavascript />
+        <Slide direction="up" triggerOnce>
+          <div
+            style={{ zIndex: 10 }}
+            className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md"
+          >
+            <h3 className="text-5xl text-center m-5">
+              <span className="active">Tech I use</span>
+            </h3>
+            <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
+              <Parallax speed={10}>
+                <div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <IoLogoJavascript />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <FaBootstrap />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <FaReact />
+                  </div>
                 </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <FaBootstrap />
+              </Parallax>
+              <Parallax speed={10}>
+                <div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <SiTailwindcss />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <SiExpress />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <FaNodeJs />
+                  </div>
                 </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <FaReact />
-                </div>
-              </div>
-            </Parallax>
-            <Parallax speed={10}>
-              <div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <SiTailwindcss />
-                </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <SiExpress />
-                </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <FaNodeJs />
-                </div>
-              </div>
-            </Parallax>
-          </div>
-        </div>
-
-        <div className="w-full" style={props}>
-          <Experience />
-        </div>
-
-        <div
-          style={{ zIndex: 10 }}
-          className="connect text-gray-200 p-10  mb-32  sm:w-full"
-        >
-          <h3 className="text-5xl text-center m-5">
-            <span className="active">Connect with me</span>
-          </h3>
-          <div className="follow flex flex-col items-center">
-            <p className="p-5 text-slate-400">Follow me on </p>
-            <ul className="flex gap-5 p-5">
-              <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
-                <a href="https://twitter.com/raiderfreed">
-                  <FaTwitter />
-                </a>
-              </li>
-              <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
-                <a href="https://www.linkedin.com/in/siddhartha-mishra-628282203/">
-                  <FaLinkedin />
-                </a>
-              </li>
-              <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
-                <a
-                  href="https://www.instagram.com/sid_mishra19/"
-                  target="_blank"
-                >
-                  <FaInstagram />
-                </a>
-              </li>
-            </ul>
-
-            <div className="bg-sky-500 hover:bg-sky-600 p-4 m-5 rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
-              <h4 className="text-xl ">
-                <a href="mailto:mailbox.siddharthamishra@gmail.com?body=Add your body here">
-                  Mail me
-                </a>
-              </h4>
+              </Parallax>
             </div>
           </div>
-        </div>
+        </Slide>
+        <Slide direction="up" triggerOnce>
+          <div className="w-full" style={props}>
+            <Experience />
+          </div>
+        </Slide>
+        <Slide direction="up" triggerOnce>
+          <div
+            style={{ zIndex: 10 }}
+            className="connect text-gray-200 p-10  mb-32  sm:w-full"
+          >
+            <h3 className="text-5xl text-center m-5">
+              <span className="active">Connect with me</span>
+            </h3>
+            <div className="follow flex flex-col items-center">
+              <p className="p-5 text-slate-400">Follow me on </p>
+              <ul className="flex gap-5 p-5">
+                <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
+                  <a href="https://twitter.com/raiderfreed">
+                    <FaTwitter />
+                  </a>
+                </li>
+                <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
+                  <a href="https://www.linkedin.com/in/siddhartha-mishra-628282203/">
+                    <FaLinkedin />
+                  </a>
+                </li>
+                <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
+                  <a
+                    href="https://www.instagram.com/sid_mishra19/"
+                    target="_blank"
+                  >
+                    <FaInstagram />
+                  </a>
+                </li>
+              </ul>
+
+              <div className="bg-sky-500 hover:bg-sky-600 p-4 m-5 rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
+                <h4 className="text-xl ">
+                  <a href="mailto:mailbox.siddharthamishra@gmail.com?body=Add your body here">
+                    Mail me
+                  </a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </Slide>
 
         <Footer />
       </div>
