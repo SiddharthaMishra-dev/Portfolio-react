@@ -13,10 +13,7 @@ function Project() {
           <h2 className=" text-3xl text-center m-10">
             <span className="active p-1">I have built these</span>
           </h2>
-          <div
-            style={{ zIndex: 10 }}
-            className="flex flex-col justify-center items-center"
-          >
+          <div className="flex flex-col justify-center items-center">
             <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex flex-row-reverse items-center md:w-3/4 ">
               <div className="bg-sky-500 max-w-lg md:w-full">
                 <img

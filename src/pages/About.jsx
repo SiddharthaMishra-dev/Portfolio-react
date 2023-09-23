@@ -139,7 +139,7 @@ function About() {
         </Slide>
         <Slide direction="up" triggerOnce>
           <div
-            style={{ zIndex: 10 }}
+            // style={{ zIndex: 10 }}
             className="connect text-gray-200 p-10  mb-32  sm:w-full"
           >
             <h3 className="text-5xl text-center m-5">
