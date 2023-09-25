@@ -2,11 +2,9 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import Typed from "typed.js";
 import { useSpring } from "@react-spring/web";
 import Profile from "../assets/Profile.jpg";
-import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Experience from "../components/Experience";
 import { Slide } from "react-awesome-reveal";
-
 import {
   FaTwitter,
   FaLinkedin,
@@ -16,13 +14,11 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiTailwindcss, SiExpress } from "react-icons/si";
+import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 import "react-tabs/style/react-tabs.css";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import particlesConfig from "../config/particlesConfig";
 import Atropos from "atropos/react";
-import { Parallax } from "react-scroll-parallax";
+
 function About() {
   const [isVisible, setVisible] = useState(false);
   const desc = useRef(null);
@@ -44,10 +40,7 @@ function About() {
       typed.destroy();
     };
   }, []);
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  });
-  const particlesLoaded = useCallback(async (container) => {}, []);
+
   return (
     <>
       <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
@@ -82,7 +75,10 @@ function About() {
               <div className="side-content p-10">
                 <h4 className="text-2xl">Hey!</h4>
                 <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
-                <p className="text-gray-500 text-3xl mt-5" ref={desc} />
+                <p className="text-gray-500 text-3xl mt-5">
+                  &lt; <span ref={desc} className="text-sky-500" /> /&gt;
+                </p>
+
                 <div className="text-lg mt-4">
                   I am an undergraduate student with a passion for web
                   development. Enjoy exploring new technologies and using them.
@@ -103,32 +99,35 @@ function About() {
               <span className="active">Tech I use</span>
             </h3>
             <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
-              <Parallax speed={10}>
-                <div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                    <IoLogoJavascript />
-                  </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                    <FaBootstrap />
-                  </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                    <FaReact />
-                  </div>
+              <div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <IoLogoJavascript />
                 </div>
-              </Parallax>
-              <Parallax speed={10}>
-                <div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                    <SiTailwindcss />
-                  </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                    <SiExpress />
-                  </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                    <FaNodeJs />
-                  </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <FaBootstrap />
                 </div>
-              </Parallax>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <FaReact />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <TbBrandNextjs />
+                </div>
+              </div>
+
+              <div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <SiTailwindcss />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <SiExpress />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <FaNodeJs />
+                </div>
+                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <SiMongodb />
+                </div>
+              </div>
             </div>
           </div>
         </Slide>
