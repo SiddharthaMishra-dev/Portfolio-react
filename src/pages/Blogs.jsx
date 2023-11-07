@@ -1,17 +1,14 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Footer from "../components/Footer";
-import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import particlesConfig from "../config/particlesConfig";
 import { PiDevToLogoFill } from "react-icons/pi";
+
+import Loading from "../components/Loading";
 
 const Blog = () => {
   const [fetchingArticles, setFetchingArticles] = useState(false);
   const [blogs, setBlogs] = useState([]);
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  });
-  const particlesLoaded = useCallback(async (container) => {}, []);
+
   const fetchArticles = async () => {
     try {
       setFetchingArticles(true);
@@ -34,16 +31,9 @@ const Blog = () => {
   return (
     <>
       <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
-        {/* <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={particlesConfig}
-        /> */}
-        {/* <Nav i={i} handleChangeI={handleChangeI} /> */}
         <div className="w-full p-4 flex flex-col justify-center items-center">
           {fetchingArticles ? (
-            <span>Loading ... </span>
+            <Loading />
           ) : (
             <ul className="">
               {blogs.map((blog) => (

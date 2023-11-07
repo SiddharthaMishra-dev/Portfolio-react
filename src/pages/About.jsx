@@ -1,9 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Typed from "typed.js";
-import { useSpring } from "@react-spring/web";
-import Profile from "../assets/Profile.jpg";
-import Footer from "../components/Footer";
-import Experience from "../components/Experience";
 import { Slide } from "react-awesome-reveal";
 import {
   FaTwitter,
@@ -18,6 +14,11 @@ import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import "react-tabs/style/react-tabs.css";
 import Atropos from "atropos/react";
+
+import { useSpring } from "@react-spring/web";
+import Profile from "../assets/Profile.jpg";
+import Footer from "../components/Footer";
+import Experience from "../components/Experience";
 
 function About() {
   const [isVisible, setVisible] = useState(false);
@@ -44,13 +45,6 @@ function About() {
   return (
     <>
       <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
-        {/* <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={particlesConfig}
-        /> */}
-        {/* <Nav i={i} handleChangeI={handleChangeI} /> */}
         <div className="lg:w-3/4 mx-auto ">
           <Atropos
             activeOffset={4}
@@ -153,7 +147,7 @@ function About() {
                   </a>
                 </li>
                 <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
-                  <a href="https://www.linkedin.com/in/siddhartha-mishra-628282203/">
+                  <a href="https://www.linkedin.com/in/siddharthamishra-dev/">
                     <FaLinkedin />
                   </a>
                 </li>
