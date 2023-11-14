@@ -9,7 +9,7 @@
   color: rgb(14 165 233 / var(--tw-text-opacity));
 }
 
-.loading-icon{
+.loading-icon {
   width: 200px;
   height: 200px;
   animation-duration: 2s;
@@ -18,12 +18,17 @@
   animation-timing-function: linear;
 }
 
-@keyframes grow {
-  0%,100%{
-    transform: scale(1);
+.nav-background {
+  background: rgba(15, 23, 42, 0.75);
 }
-50%{
+
+@keyframes grow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
     transform: scale(1.2);
     opacity: 0.9;
-}
+  }
 }

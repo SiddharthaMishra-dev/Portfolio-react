@@ -43,14 +43,7 @@ function About() {
 
   return (
     <>
-      <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
-        {/* <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={particlesConfig}
-        /> */}
-        {/* <Nav i={i} handleChangeI={handleChangeI} /> */}
+      <div className="relative m-0 w-full h-full flex flex-col justify-between ">
         <div className="lg:w-3/4 mx-auto ">
           <Atropos
             activeOffset={4}
@@ -91,10 +84,7 @@ function About() {
           </Atropos>
         </div>
         <Slide direction="up" triggerOnce>
-          <div
-            style={{ zIndex: 10 }}
-            className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md"
-          >
+          <div className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md">
             <h3 className="text-5xl text-center m-5">
               <span className="active">Tech I use</span>
             </h3>
