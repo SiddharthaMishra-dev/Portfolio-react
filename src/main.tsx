@@ -6,7 +6,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import "./index.css";
 import "atropos/css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ParallaxProvider>
       <App />

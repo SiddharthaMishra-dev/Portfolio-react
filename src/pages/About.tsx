@@ -1,23 +1,17 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
-import { useSpring } from "@react-spring/web";
-import Profile from "../assets/Profile.jpg";
-import Footer from "../components/Footer";
-import Experience from "../components/Experience";
+import { useSpring, animated } from "@react-spring/web";
 import { Slide } from "react-awesome-reveal";
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaReact,
-  FaBootstrap,
-  FaNodeJs,
-} from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaInstagram, FaReact, FaBootstrap, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-import "react-tabs/style/react-tabs.css";
 import Atropos from "atropos/react";
+import "react-tabs/style/react-tabs.css";
+
+import Profile from "../assets/Profile.jpg";
+import Footer from "../components/Footer";
+import Experience from "../components/Experience";
 
 function About() {
   const [isVisible, setVisible] = useState(false);
@@ -69,21 +63,28 @@ function About() {
                 <h4 className="text-2xl">Hey!</h4>
                 <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
                 <p className="text-gray-500 text-3xl mt-5">
-                  &lt; <span ref={desc} className="text-sky-500" /> /&gt;
+                  &lt;{" "}
+                  <span
+                    ref={desc}
+                    className="text-sky-500"
+                  />{" "}
+                  /&gt;
                 </p>
 
                 <div className="text-lg mt-4">
-                  I am an undergraduate student with a passion for web
-                  development. Enjoy exploring new technologies and using them.
-                  Always eager to work and collaborate with senior and junior
-                  developers. Enthusiastic about learning and applying new
-                  technologies to provide the best solution.
+                  I am an undergraduate student with a passion for web development. Enjoy exploring
+                  new technologies and using them. Always eager to work and collaborate with senior
+                  and junior developers. Enthusiastic about learning and applying new technologies
+                  to provide the best solution.
                 </div>
               </div>
             </div>
           </Atropos>
         </div>
-        <Slide direction="up" triggerOnce>
+        <Slide
+          direction="up"
+          triggerOnce
+        >
           <div className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md">
             <h3 className="text-5xl text-center m-5">
               <span className="active">Tech I use</span>
@@ -121,12 +122,21 @@ function About() {
             </div>
           </div>
         </Slide>
-        <Slide direction="up" triggerOnce>
-          <div className="w-full" style={props}>
+        <Slide
+          direction="up"
+          triggerOnce
+        >
+          <animated.div
+            className="w-full"
+            style={props}
+          >
             <Experience />
-          </div>
+          </animated.div>
         </Slide>
-        <Slide direction="up" triggerOnce>
+        <Slide
+          direction="up"
+          triggerOnce
+        >
           <div
             // style={{ zIndex: 10 }}
             className="connect text-gray-200 p-10  mb-32  sm:w-full"

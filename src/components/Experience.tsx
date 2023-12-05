@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import experience from "../utils/data";
 
 const Experience = () => {
   const [index, setIndex] = useState(0);
-  const handleChange = (id) => {
+  const handleChange = (id: number) => {
     setIndex(id);
   };
   return (
@@ -29,8 +29,8 @@ const Experience = () => {
       </div>
       <div className="job-item p-5 rounded-md mt-5">
         <p className="text-2xl text-sky-500 font-bold">
-          <span className="text-gray-200">{experience[index].designation}</span>{" "}
-          @{experience[index].company}
+          <span className="text-gray-200">{experience[index].designation}</span> @
+          {experience[index].company}
         </p>
         <p className="mt-2 text-gray-400">{experience[index].tenure}</p>
         <article className="mt-2">{experience[index].description}</article>

@@ -1,4 +1,6 @@
-const particlesConfig = {
+import type { ISourceOptions } from "tsparticles-engine";
+
+const particlesConfig: ISourceOptions = {
   autoPlay: true,
   background: {
     color: {

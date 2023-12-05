@@ -1,4 +1,13 @@
-const experience = [
+interface ExperienceType {
+  id: number;
+  company: string;
+  tenure: string;
+  description: string;
+  designation: string;
+  image?: string;
+}
+
+const experience: ExperienceType[] = [
   {
     id: 0,
     company: "Postman",

@@ -1,19 +1,21 @@
 import { Outlet } from "react-router-dom";
-import Loading from "../components/Loading";
 import { useCallback } from "react";
-import Nav from "../components/Nav";
 import Particles from "react-particles";
-import particlesConfig from "../config/particlesConfig";
 import { loadFull } from "tsparticles";
-
 import { Suspense } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+
+import Nav from "../components/Nav";
+import Loading from "../components/Loading";
+import particlesConfig from "../config/particlesConfig";
 
 const Layout = () => {
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
-  });
-  const particlesLoaded = useCallback(async (container) => {}, []);
-  // console.log("render");
+  }, []);
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    console.log(container);
+  }, []);
   return (
     <>
       <div>
