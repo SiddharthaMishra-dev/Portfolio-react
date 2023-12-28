@@ -19,7 +19,7 @@ const Experience = () => {
               key={index1}
               onClick={() => handleChange(job.id)}
               className={`p-1 text-xl cursor-pointer hover:text-sky-500  ${
-                job.id === index && "active"
+                job.id === index && "active text-sky-500"
               }`}
             >
               {job.company}

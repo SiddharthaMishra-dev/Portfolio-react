@@ -107,7 +107,7 @@ function Project() {
                   className="w-full opacity-60 hover:opacity-100"
                 />
               </div>
-              <div className="pt-2 p-4 md:text-left">
+              <div className="pt-2 w-full p-4 md:text-left">
                 <h5 className="text-sky-600 font-bold text-2xl items-center">URL shortner</h5>
                 <span className="pt-5">
                   URL shortner build using expressjs and uses gotiny shortner API to convert the

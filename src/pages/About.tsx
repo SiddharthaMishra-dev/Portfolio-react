@@ -50,7 +50,6 @@ function About() {
           >
             <div
               data-atropos-offset="0"
-              // style={{ zIndex: 10 }}
               className="md:flex text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left md:pt-10"
             >
               <img
@@ -66,7 +65,7 @@ function About() {
                   &lt;{" "}
                   <span
                     ref={desc}
-                    className="text-sky-500"
+                    className="text-sky-500 text-xl md:text-3xl"
                   />{" "}
                   /&gt;
                 </p>
