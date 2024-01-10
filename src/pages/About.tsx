@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { useSpring, animated } from "@react-spring/web";
-import { Slide } from "react-awesome-reveal";
+import { Slide, Fade } from "react-awesome-reveal";
 import { FaTwitter, FaLinkedin, FaInstagram, FaReact, FaBootstrap, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
@@ -36,7 +36,7 @@ function About() {
   }, []);
 
   return (
-    <>
+    <Fade duration={1000}>
       <div className="relative m-0 w-full h-full flex flex-col justify-between ">
         <div className="lg:w-3/4 mx-auto ">
           <Atropos
@@ -179,7 +179,7 @@ function About() {
 
         <Footer />
       </div>
-    </>
+    </Fade>
   );
 }
 

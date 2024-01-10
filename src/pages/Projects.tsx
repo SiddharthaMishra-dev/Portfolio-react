@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
+import { Fade } from "react-awesome-reveal";
 
 import indiaAround from "../assets/india-around.png";
 import urlshortner from "../assets/URL-shortner.png";
@@ -9,7 +10,7 @@ import Footer from "../components/Footer";
 
 function Project() {
   return (
-    <>
+    <Fade duration={1000}>
       <div className="relative m-0 w-full h-screen flex flex-col justify-between">
         <div className="text-gray-200">
           <h2 className=" text-3xl text-center m-10">
@@ -21,7 +22,7 @@ function Project() {
                 <img
                   src={bloggers}
                   alt=""
-                  className="w-full  opacity-60 hover:opacity-100"
+                  className="w-full  opacity-60 hover:opacity-100 transition"
                 />
               </div>
               <div className="pt-2 p-4 md:text-left">
@@ -56,7 +57,7 @@ function Project() {
                 <img
                   src={shopKaro}
                   alt=""
-                  className="w-full  opacity-60 hover:opacity-100"
+                  className="w-full  opacity-60 hover:opacity-100 transition"
                 />
               </div>
               <div className="pt-2 p-4 md:text-left">
@@ -80,7 +81,7 @@ function Project() {
                 <img
                   src={indiaAround}
                   alt=""
-                  className="w-full opacity-60 hover:opacity-100"
+                  className="w-full opacity-60 hover:opacity-100 transition"
                 />
               </div>
               <div className="pt-2 p-4 md:text-right">
@@ -104,7 +105,7 @@ function Project() {
                 <img
                   src={urlshortner}
                   alt=""
-                  className="w-full opacity-60 hover:opacity-100"
+                  className="w-full opacity-60 hover:opacity-100 transition"
                 />
               </div>
               <div className="pt-2 w-full p-4 md:text-left">
@@ -127,7 +128,7 @@ function Project() {
         </div>
         <Footer />
       </div>
-    </>
+    </Fade>
   );
 }
 export default Project;

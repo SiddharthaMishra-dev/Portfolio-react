@@ -9,7 +9,7 @@ function Nav() {
       style={{ zIndex: 10 }}
       className="sticky top-1 "
     >
-      <ul className="flex gap-5 w-full md:w-2/3 mx-auto rounded-2xl text-slate-300 m-0 mt-5 mb-5 p-5 justify-center text-2xl bg-[#0336c433] font-semibold">
+      <ul className="flex gap-5 w-full md:w-2/3 mx-auto rounded-2xl text-slate-300 m-0 mt-5 mb-5 p-5 justify-center text-2xl bg-[#081d58] font-semibold">
         <li
           className={`cursor-pointer hover:text-sky-500 ${pathname === "/" && "text-sky-500"}`}
           onClick={() => {

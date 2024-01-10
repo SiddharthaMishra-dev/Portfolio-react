@@ -13,23 +13,19 @@ const Layout = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {}, []);
   return (
     <>
-      <div>
-        <Nav />
-        <Suspense fallback={<Loading />}>
-          <Particles
+      <Nav />
+      <Suspense fallback={<Loading />}>
+        {/* <Particles
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
             options={particlesConfig}
-          />
-          <Outlet />
-        </Suspense>
-      </div>
+          /> */}
+        <Outlet />
+      </Suspense>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { PiDevToLogoFill } from "react-icons/pi";
+import { Fade } from "react-awesome-reveal";
 
 import Footer from "../components/Footer";
 
@@ -24,7 +25,7 @@ const Blog = () => {
     fetchArticles();
   }, []);
   return (
-    <>
+    <Fade duration={1000}>
       <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
         <div className="w-full p-4 flex flex-col justify-center items-center">
           {fetchingArticles ? (
@@ -60,7 +61,7 @@ const Blog = () => {
         </div>
         <Footer />
       </div>
-    </>
+    </Fade>
   );
 };
 export default Blog;
