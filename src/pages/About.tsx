@@ -167,7 +167,7 @@ function About() {
               </ul>
 
               <div className="bg-sky-500 hover:bg-sky-600 p-4 m-5 rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
-                <h4 className="text-xl ">
+                <h4 className="text-xl font-semibold">
                   <a href="mailto:mailbox.siddharthamishra@gmail.com?body=Add your body here">
                     Mail me
                   </a>

@@ -6,21 +6,31 @@
   box-shadow: 0 2px rgb(14 165 233 / var(--tw-text-opacity));
 }
 
-/* .active {
-  transition: box-shadow 0.3s ease;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.shadow-slide {
-  box-shadow: 0 2px rgba(14, 165, 233, 0.4);
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.shadow-slide:not(.active) {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0341ec33;
+  border-radius: 7px;
+  transition: 1s;
 }
 
-.highlight {
-  color: rgb(14 165 233 / var(--tw-text-opacity));
-} */
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #011652;
+
+  /* transition-property: color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms; */
+}
 
 .loading-icon {
   width: 200px;

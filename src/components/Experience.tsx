@@ -29,8 +29,8 @@ const Experience = () => {
           <span className="text-gray-200">{experience[index].designation}</span> @
           {experience[index].company}
         </p>
-        <p className="mt-2 text-gray-400">{experience[index].tenure}</p>
-        <article className="mt-2">{experience[index].description}</article>
+        <p className="mt-2 text-gray-400 text-lg">{experience[index].tenure}</p>
+        <article className="mt-2 text-lg space-x-1">{experience[index].description}</article>
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import { PiDevToLogoFill } from "react-icons/pi";
 import { Fade } from "react-awesome-reveal";
 
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const Blog = () => {
   const [fetchingArticles, setFetchingArticles] = useState(false);
@@ -29,7 +30,7 @@ const Blog = () => {
       <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
         <div className="w-full p-4 flex flex-col justify-center items-center">
           {fetchingArticles ? (
-            <span>Loading ... </span>
+            <Loading />
           ) : (
             <ul className="">
               {blogs.map((blog: any) => (
@@ -39,7 +40,7 @@ const Blog = () => {
                       <img
                         src={blog.social_image}
                         alt=""
-                        className="w-full "
+                        className="min-w-full"
                       />
                     </div>
                     <div className="pt-2 p-4 md:text-left">
