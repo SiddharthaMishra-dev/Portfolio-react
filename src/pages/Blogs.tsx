@@ -1,9 +1,12 @@
 import { lazy, useEffect, useState } from "react";
 import { PiDevToLogoFill } from "react-icons/pi";
 import { Fade } from "react-awesome-reveal";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
+
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Blog = () => {
   const [fetchingArticles, setFetchingArticles] = useState(false);
@@ -36,11 +39,10 @@ const Blog = () => {
               {blogs.map((blog: any) => (
                 <li key={blog.id}>
                   <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex flex-row-reverse items-center md:w-3/4 mx-auto">
-                    <div className="max-w-lg">
-                      <img
+                    <div className="max-w-lg min-h-full">
+                      <LazyLoadImage
                         src={blog.social_image}
-                        alt=""
-                        className="min-w-full"
+                        effect="blur"
                       />
                     </div>
                     <div className="pt-2 p-4 md:text-left">
