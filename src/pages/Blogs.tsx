@@ -30,7 +30,7 @@ const Blog = () => {
   }, []);
   return (
     <Fade duration={1000}>
-      <div className="relative m-0 w-full h-screen flex flex-col justify-between ">
+      <div className="relative m-0 w-full flex flex-col justify-between ">
         <div className="w-full p-4 flex flex-col justify-center items-center">
           {fetchingArticles ? (
             <Loading />
@@ -43,17 +43,18 @@ const Blog = () => {
                       <LazyLoadImage
                         src={blog.social_image}
                         effect="blur"
+                        style={{ height: "100%" }}
                       />
                     </div>
                     <div className="pt-2 p-4 md:text-left">
                       <h5 className="text-sky-600 font-bold text-2xl items-center">{blog.title}</h5>
-                      <span className="pt-5 text-white">{blog.description}</span>
+                      <span className="pt-5 text-gray-800 dark:text-white">{blog.description}</span>
 
                       <a
                         href={blog.url}
                         target="_blank"
                       >
-                        <PiDevToLogoFill className="mt-5 text-3xl text-white hover:text-sky-200 md:me-auto" />
+                        <PiDevToLogoFill className="mt-5 text-3xl text-gray-800 dark:text-white dark:hover:text-sky-200 hover:text-sky-500 md:me-auto" />
                       </a>
                     </div>
                   </div>

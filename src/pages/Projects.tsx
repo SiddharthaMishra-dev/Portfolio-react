@@ -11,8 +11,8 @@ import Footer from "../components/Footer";
 function Project() {
   return (
     <Fade duration={1000}>
-      <div className="relative m-0 w-full h-screen flex flex-col justify-between">
-        <div className="text-gray-200">
+      <div className="relative m-0 w-full  flex flex-col justify-between">
+        <div className="text-gray-900 dark:text-gray-200">
           <h2 className=" text-3xl text-center m-10">
             <span className="active p-1 font-semibold">Projects</span>
           </h2>

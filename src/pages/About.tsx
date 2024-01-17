@@ -50,7 +50,7 @@ function About() {
           >
             <div
               data-atropos-offset="0"
-              className="md:flex text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left md:pt-10"
+              className="md:flex text-gray-900 dark:text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left md:pt-10"
             >
               <img
                 src={Profile}
@@ -61,7 +61,7 @@ function About() {
               <div className="side-content p-10">
                 <h4 className="text-2xl">Hey!</h4>
                 <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
-                <p className="text-gray-500 text-3xl mt-5">
+                <p className="dark:text-gray-500 text-gray-900 text-3xl mt-5">
                   &lt;{" "}
                   <span
                     ref={desc}
@@ -84,7 +84,7 @@ function About() {
           direction="up"
           triggerOnce
         >
-          <div className="technologies text-gray-200 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md">
+          <div className="technologies dark:text-gray-200 text-gray-900 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md">
             <h3 className="text-5xl text-center m-5">
               <span className="active">Tech I use</span>
             </h3>
@@ -138,13 +138,13 @@ function About() {
         >
           <div
             // style={{ zIndex: 10 }}
-            className="connect text-gray-200 p-10  mb-32  sm:w-full"
+            className="connect dark:text-gray-200 text-gray-900 p-10  mb-32  sm:w-full"
           >
             <h3 className="text-5xl text-center m-5">
               <span className="active">Connect with me</span>
             </h3>
             <div className="follow flex flex-col items-center">
-              <p className="p-5 text-slate-400">Follow me on </p>
+              <p className="p-5 dark:text-slate-400 text-slate-900 ">Follow me on </p>
               <ul className="flex gap-5 p-5">
                 <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
                   <a href="https://twitter.com/raiderfreed">
