@@ -2,6 +2,10 @@ import { Switch } from "@headlessui/react";
 import { SunIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { AiFillProject } from "react-icons/ai";
+import { FaDev } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+
 import { useLocalStorage } from "usehooks-ts";
 
 function classNames(...classes: string[]) {
@@ -34,34 +38,39 @@ function Nav() {
     >
       <ul className="flex gap-5 w-full md:w-2/3 mx-auto rounded-2xl text-slate-900 dark:text-slate-300 m-0  mb-5 p-5 justify-center text-2xl bg-sky-400  dark:bg-[#081d58] font-semibold">
         <li
-          className={`cursor-pointer hover:text-sky-700 ${pathname === "/" && "text-sky-700"}`}
+          className={`flex justify-center items-center gap-x-2 cursor-pointer hover:text-sky-700 ${
+            pathname === "/" && "text-sky-700"
+          }`}
           onClick={() => {
             navigate("/");
           }}
         >
-          About
+          <AiFillHome size={25} />
+          <span className="hidden md:inline">About</span>
         </li>
         <li
-          className={` cursor-pointer hover:text-sky-700 ${
+          className={`flex justify-center items-center gap-x-2 cursor-pointer hover:text-sky-700 ${
             pathname === "/projects" && "text-sky-700"
           }`}
           onClick={() => {
             navigate("/projects");
           }}
         >
-          Projects
+          <AiFillProject size={25} />
+          <span className="hidden md:inline">Projects</span>
         </li>
         <li
-          className={` cursor-pointer hover:text-sky-700 ${
+          className={`flex justify-center items-center gap-x-2 cursor-pointer hover:text-sky-700 ${
             pathname === "/blogs" && "text-sky-700"
           } `}
           onClick={() => {
             navigate("/blogs");
           }}
         >
-          Blogs
+          <FaDev size={25} />
+          <span className="hidden md:inline">Blogs</span>
         </li>
-        <Switch
+        {/* <Switch
           checked={enabled}
           onChange={handleThemeChange}
           className={classNames(
@@ -95,7 +104,7 @@ function Nav() {
               <SunIcon className="h-8 w-8 text-yellow-600" />
             </span>
           </span>
-        </Switch>
+        </Switch> */}
       </ul>
     </nav>
   );

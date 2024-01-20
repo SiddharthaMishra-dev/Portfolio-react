@@ -22,22 +22,22 @@ const Layout = () => {
   //   await loadFull(engine);
   // }, []);
   // const particlesLoaded = useCallback(async (container: Container | undefined) => {}, []);
-  // const [theme, setTheme] = useLocalStorage("theme", "light");
+  const [theme, setTheme] = useLocalStorage("theme", "light");
 
-  // useEffect(() => {
-  //   document.body.classList.remove("light", "dark");
-  //   document.body.classList.add(theme);
-  // }, [theme]);
+  useEffect(() => {
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(theme);
+  }, [theme]);
 
-  // const [enabled, setEnabled] = useState(theme == "light");
+  const [enabled, setEnabled] = useState(theme == "light");
 
-  // const handleThemeChange = (enabled: boolean) => {
-  //   setTheme(enabled ? "light" : "dark");
-  //   setEnabled(enabled);
-  // };
+  const handleThemeChange = (enabled: boolean) => {
+    setTheme(enabled ? "light" : "dark");
+    setEnabled(enabled);
+  };
 
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 transition-colors duration-500 ease-in-out">
+    <div className="relative bg-slate-100 dark:bg-slate-900 transition-colors duration-500 ease-in-out">
       <Nav />
       {/* <Switch
         checked={enabled}
@@ -55,18 +55,18 @@ const Layout = () => {
           )}
         />
       </Switch> */}
-      {/* <Switch
+      <Switch
         checked={enabled}
         onChange={handleThemeChange}
         className={classNames(
           enabled ? "bg-gray-400" : "bg-yellow-600",
-          "relative inline-flex h-10 w-20 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out"
+          "fixed z-10 left-5 bottom-5 inline-flex h-20 w-10 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out"
         )}
       >
         <span className="sr-only">Use setting</span>
         <span
           className={classNames(
-            enabled ? "translate-x-10" : "translate-x-0",
+            enabled ? "translate-y-10" : "translate-y-0",
             "pointer-events-none relative inline-block h-9 w-9 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
           )}
         >
@@ -89,7 +89,7 @@ const Layout = () => {
             <SunIcon className="h-8 w-8 text-yellow-600" />
           </span>
         </span>
-      </Switch> */}
+      </Switch>
       <Suspense fallback={<Loading />}>
         <Outlet />
       </Suspense>

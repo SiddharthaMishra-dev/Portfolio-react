@@ -18,16 +18,16 @@ function Project() {
           </h2>
           <div className="flex flex-col justify-center items-center">
             <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex flex-row items-center md:w-3/4 ">
-              <div className="bg-sky-500 max-w-lg md:w-full">
+              <div className="bg-sky-500 md:max-w-lg">
                 <img
                   src={bloggers}
                   alt=""
-                  className="w-full  opacity-60 hover:opacity-100 transition"
+                  className="w-full opacity-60 hover:opacity-100 transition"
                 />
               </div>
               <div className="pt-2 p-4 md:text-left">
                 <h5 className="text-sky-600 font-bold text-2xl items-center">Blog-g-ers</h5>
-                <span className="pt-5">
+                <span className="pt-5 ">
                   It is micro blogging website build using Nextjs 13. All API's are developed with
                   nextjs.It has functionalities like authentication, authorization , edit by owner,
                   like and delete of Blogs. It uses NextUI library for modular components and
@@ -53,7 +53,7 @@ function Project() {
             </div>
 
             <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex flex-row-reverse items-center md:w-3/4 ">
-              <div className="bg-sky-500 max-w-lg md:w-full">
+              <div className="bg-sky-500 md:max-w-lg">
                 <img
                   src={shopKaro}
                   alt=""
@@ -62,7 +62,7 @@ function Project() {
               </div>
               <div className="pt-2 p-4 md:text-left">
                 <h5 className="text-sky-600 font-bold text-2xl items-center">ShopKaro</h5>
-                <span className="pt-5">
+                <span className="pt-5 ">
                   It is the E-commerce website build using reactjs , redux and material-ui. For
                   products ,I use dummy-json API . I has home page, product showcase , cart page ,
                   cart state to store cart items.
@@ -77,7 +77,7 @@ function Project() {
               </div>
             </div>
             <div className="rounded-md mt-10 m-10 shadow-2xl  md:flex items-center md:w-3/4 ">
-              <div className="bg-sky-500 max-w-lg md:full">
+              <div className="bg-sky-500 md:max-w-lg">
                 <img
                   src={indiaAround}
                   alt=""
@@ -101,7 +101,7 @@ function Project() {
             </div>
 
             <div className="rounded-md mt-10 m-10 shadow-2xl md:flex flex-row-reverse items-center md:w-3/4">
-              <div className="bg-sky-500 max-w-lg md:w-full">
+              <div className="bg-sky-500 md:max-w-lg">
                 <img
                   src={urlshortner}
                   alt=""
