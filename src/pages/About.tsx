@@ -1,17 +1,17 @@
-import { useEffect, useRef, useState } from "react";
-import Typed from "typed.js";
-import { useSpring, animated } from "@react-spring/web";
-import { Slide, Fade } from "react-awesome-reveal";
-import { FaTwitter, FaLinkedin, FaInstagram, FaReact, FaBootstrap, FaNodeJs } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+import { animated, useSpring } from "@react-spring/web";
 import Atropos from "atropos/react";
+import { useEffect, useRef, useState } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
+import { FaBootstrap, FaInstagram, FaLinkedin, FaNodeJs, FaReact, FaTwitter } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 import "react-tabs/style/react-tabs.css";
+import Typed from "typed.js";
 
 import Profile from "../assets/Profile.jpg";
-import Footer from "../components/Footer";
 import Experience from "../components/Experience";
+import Footer from "../components/Footer";
 
 function About() {
   const [isVisible, setVisible] = useState(false);
@@ -38,7 +38,7 @@ function About() {
   return (
     <Fade duration={1000}>
       <div className="relative m-0 w-full h-full flex flex-col justify-between ">
-        <div className="lg:w-3/4 mx-auto ">
+        <div className="lg:w-3/4 w-4/5 mx-auto ">
           <Atropos
             activeOffset={4}
             shadow={true}
@@ -65,17 +65,25 @@ function About() {
                   &lt;{" "}
                   <span
                     ref={desc}
-                    className="text-sky-500 text-xl md:text-3xl"
+                    className="text-sky-500 text-3xl md:text-4xl"
                   />{" "}
                   /&gt;
                 </p>
 
-                <div className="text-lg mt-4">
+                <div className="text-lg mt-4 tracking-normal">
                   I am an undergraduate student with a passion for web development. Enjoy exploring
                   new technologies and using them. Always eager to work and collaborate with senior
                   and junior developers. Enthusiastic about learning and applying new technologies
                   to provide the best solution.
                 </div>
+                <button className="mt-4 mx-auto md:mx-0 md:mt-6  flex gap-x-3 text-2xl px-4 py-2 outline outline-sky-500 rounded-md hover:bg-blue-600 transition">
+                  <a
+                    href="https://drive.google.com/file/d/1LE6uvFEGpF66yH-rzDTtgj-dR4doeEiB/view?usp=sharing"
+                    download="siddhartha_mishra.pdf"
+                  >
+                    Download Resume
+                  </a>
+                </button>
               </div>
             </div>
           </Atropos>

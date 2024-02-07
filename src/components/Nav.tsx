@@ -1,10 +1,7 @@
-import { Switch } from "@headlessui/react";
-import { SunIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { AiFillProject } from "react-icons/ai";
+import { AiFillHome, AiFillProject } from "react-icons/ai";
 import { FaDev } from "react-icons/fa";
-import { AiFillHome } from "react-icons/ai";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { useLocalStorage } from "usehooks-ts";
 
