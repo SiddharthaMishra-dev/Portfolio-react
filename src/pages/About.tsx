@@ -2,7 +2,9 @@ import { animated, useSpring } from "@react-spring/web";
 import Atropos from "atropos/react";
 import { useEffect, useRef, useState } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
-import { FaBootstrap, FaInstagram, FaLinkedin, FaNodeJs, FaReact, FaTwitter } from "react-icons/fa";
+import { FaBootstrap, FaInstagram, FaLinkedin, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { IoLogoJavascript } from "react-icons/io";
 import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -12,6 +14,8 @@ import Typed from "typed.js";
 import Profile from "../assets/Profile.jpg";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
+
+// import "atropos/css";
 
 function About() {
   const [isVisible, setVisible] = useState(false);
@@ -93,9 +97,7 @@ function About() {
           triggerOnce
         >
           <div className="technologies dark:text-gray-200 text-gray-900 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md">
-            <h3 className="text-5xl text-center m-5">
-              <span className="active">Tech I use</span>
-            </h3>
+            <p className="text-3xl text-center m-5">Tech I use</p>
             <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
               <div>
                 <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
@@ -148,15 +150,13 @@ function About() {
             // style={{ zIndex: 10 }}
             className="connect dark:text-gray-200 text-gray-900 p-10  mb-32  sm:w-full"
           >
-            <h3 className="text-5xl text-center m-5">
-              <span className="active">Connect with me</span>
-            </h3>
+            <p className="text-3xl text-center m-5">Connect with me</p>
             <div className="follow flex flex-col items-center">
               <p className="p-5 dark:text-slate-400 text-slate-900 ">Follow me on </p>
               <ul className="flex gap-5 p-5">
                 <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
                   <a href="https://twitter.com/raiderfreed">
-                    <FaTwitter />
+                    <FaXTwitter />
                   </a>
                 </li>
                 <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">

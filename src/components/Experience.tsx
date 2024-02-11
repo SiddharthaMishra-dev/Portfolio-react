@@ -8,7 +8,7 @@ const Experience = () => {
   };
   return (
     <div className="experience text-gray-900 dark:text-gray-200 lg:w-3/4 m-auto  mb-32 rounded-md shadow-sm items-center md:text-left p-10 md:pt-10">
-      <h1 className="text-5xl text-center m-5">Experience</h1>
+      <h1 className="text-3xl text-center m-5 ">Experience</h1>
       <div className="w-full overflow-auto flex gap-5  p-0 md:p-5 md:justify-center">
         {experience.map((job, index1) => {
           return (
