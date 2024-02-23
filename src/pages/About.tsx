@@ -41,7 +41,7 @@ function About() {
 
   return (
     <Fade duration={1000}>
-      <div className="relative m-0 w-full h-full flex flex-col justify-between ">
+      <div className="relative m-0 w-full h-full flex flex-col justify-between">
         <div className="lg:w-3/4 w-4/5 mx-auto ">
           <Atropos
             activeOffset={4}
@@ -152,19 +152,19 @@ function About() {
           >
             <p className="text-3xl text-center m-5">Connect with me</p>
             <div className="follow flex flex-col items-center">
-              <p className="p-5 dark:text-slate-400 text-slate-900 ">Follow me on </p>
+              <p className="p-5 dark:text-slate-400 text-slate-900 text-base">Follow me on </p>
               <ul className="flex gap-5 p-5">
-                <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
+                <li className="text-3xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
                   <a href="https://twitter.com/raiderfreed">
                     <FaXTwitter />
                   </a>
                 </li>
-                <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
+                <li className="text-3xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
                   <a href="https://www.linkedin.com/in/siddhartha-mishra-628282203/">
                     <FaLinkedin />
                   </a>
                 </li>
-                <li className="text-6xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
+                <li className="text-3xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
                   <a
                     href="https://www.instagram.com/sid_mishra19/"
                     target="_blank"

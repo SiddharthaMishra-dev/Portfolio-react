@@ -8,8 +8,8 @@ import "atropos/css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ParallaxProvider>
-      <App />
-    </ParallaxProvider>
+    {/* <ParallaxProvider> */}
+    <App />
+    {/* </ParallaxProvider> */}
   </React.StrictMode>
 );

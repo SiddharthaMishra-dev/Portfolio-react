@@ -1,7 +1,7 @@
 // import About from "./pages/About";
 // import Project from "./pages/Projects";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { lazy, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import Layout from "./Layout/Layout.tsx";
 
 const About = lazy(() => import("./pages/About.tsx"));
@@ -10,7 +10,7 @@ const Blog = lazy(() => import("./pages/Blogs.tsx"));
 
 function App() {
   return (
-    <>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route
@@ -32,7 +32,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

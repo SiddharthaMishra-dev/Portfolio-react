@@ -23,11 +23,30 @@ const Layout = () => {
   // }, []);
   // const particlesLoaded = useCallback(async (container: Container | undefined) => {}, []);
   const [theme, setTheme] = useLocalStorage("theme", "light");
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     document.body.classList.remove("light", "dark");
     document.body.classList.add(theme);
   }, [theme]);
+
+  useEffect(() => {
+    const updateMousePosition = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      // console.log(clientX, clientY);
+
+      setMousePosition({
+        x: clientX,
+        y: clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", updateMousePosition);
+
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+    };
+  }, []);
 
   const [enabled, setEnabled] = useState(theme == "light");
 
@@ -37,7 +56,12 @@ const Layout = () => {
   };
 
   return (
-    <div className="relative bg-slate-100 dark:bg-slate-900 transition-colors duration-500 ease-in-out">
+    <div
+      className="relative bg-slate-100 dark:bg-slate-900 transition-colors duration-500 ease-in-out"
+      style={{
+        backgroundImage: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15) , transparent 100%)`,
+      }}
+    >
       <Nav />
       <Switch
         checked={enabled}

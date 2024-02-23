@@ -45,6 +45,9 @@
   background: rgba(15, 23, 42, 0.75);
 }
 
+.custom-bg {
+  background: radial-gradient(600px at 500px 150px, #1250aa 0%, transparent 100%);
+}
 @keyframes grow {
   0%,
   100% {
