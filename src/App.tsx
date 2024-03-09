@@ -9,31 +9,19 @@ const Project = lazy(() => import("./pages/Projects.tsx"));
 const Blog = lazy(() => import("./pages/Blogs.tsx"));
 
 function App() {
-  return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={<Layout />}
-          >
-            <Route
-              path="/"
-              element={<About />}
-            />
-            <Route
-              path="/projects"
-              element={<Project />}
-            />
-            <Route
-              path="/blogs"
-              element={<Blog />}
-            />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+	return (
+		<div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route path="/" element={<About />} />
+						<Route path="/projects" element={<Project />} />
+						<Route path="/blogs" element={<Blog />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
