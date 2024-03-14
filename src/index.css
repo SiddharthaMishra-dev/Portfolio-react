@@ -74,3 +74,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.loading-icon {
+  width: 200px;
+  height: 200px;
+  animation-duration: 2s;
+  animation-name: grow;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes grow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+}
