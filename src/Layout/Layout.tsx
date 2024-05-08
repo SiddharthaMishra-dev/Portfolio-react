@@ -10,8 +10,6 @@ const Layout = () => {
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
       const { clientX, clientY } = e;
-      console.log(clientX, clientY);
-
       setMousePosition({
         x: clientX,
         y: clientY,

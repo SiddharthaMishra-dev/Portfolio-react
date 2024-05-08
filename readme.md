@@ -1,10 +1,15 @@
 ## Portfolio
+
 ### Link : [website](www.sidme.tech)
 
-### Tech Stack 
+### Tech Stack
+
 - React
-- tsParticles
+- React Router
+- Atropos
+- React-spring
 - tailwindcss
+- shadcn-ui
 
 ### setup
 
@@ -13,4 +18,3 @@
 - $ npm run dev
 
 Open for contribution or use it as template.
-
