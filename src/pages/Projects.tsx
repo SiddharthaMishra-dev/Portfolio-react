@@ -3,7 +3,6 @@ import { CgWebsite } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 
 import shopKaro from "../assets/ShopKaro.png";
-import urlshortner from "../assets/URL-shortner.png";
 import spotifyClone from "../assets/spotify-clone.png";
 import bloggers from "../assets/blog-g-gers.png";
 import indiaAround from "../assets/india-around.png";
