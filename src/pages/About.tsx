@@ -80,7 +80,7 @@ function About() {
                   and junior developers. Enthusiastic about learning and applying new technologies
                   to provide the best solution.
                 </div>
-                <button className="mt-4 mx-auto md:mx-0 md:mt-6  flex gap-x-3 text-2xl px-4 py-2 outline outline-sky-500 rounded-md hover:bg-blue-600 transition">
+                <button className=" mt-4 mx-auto md:mx-0 md:mt-6 flex gap-x-3 text-2xl px-4 py-2 outline outline-sky-500 rounded-md hover:bg-blue-600 transition">
                   <a
                     href="https://drive.google.com/file/d/1LE6uvFEGpF66yH-rzDTtgj-dR4doeEiB/view?usp=sharing"
                     download="siddhartha_mishra.pdf"
@@ -96,36 +96,38 @@ function About() {
           direction="up"
           triggerOnce
         >
-          <div className="technologies dark:text-gray-200 text-gray-900 p-10 lg:w-3/4 m-auto mt-32 mb-32 rounded-md">
-            <p className="text-3xl text-center m-5">Tech I use</p>
-            <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
-              <div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <IoLogoJavascript />
+          <div className="technologies  text-gray-200   lg:w-3/4 m-auto mt-32 mb-32 rounded-lg custom-bg">
+            <div className="shadow-lg backdrop-blur-lg p-10 bg-white/5">
+              <p className="text-4xl text-center m-5 font-semibold">Tech I use</p>
+              <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
+                <div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <IoLogoJavascript />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <FaBootstrap />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <FaReact />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <TbBrandNextjs />
+                  </div>
                 </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <FaBootstrap />
-                </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <FaReact />
-                </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <TbBrandNextjs />
-                </div>
-              </div>
 
-              <div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <SiTailwindcss />
-                </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <SiExpress />
-                </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <FaNodeJs />
-                </div>
-                <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
-                  <SiMongodb />
+                <div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <SiTailwindcss />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <SiExpress />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <FaNodeJs />
+                  </div>
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                    <SiMongodb />
+                  </div>
                 </div>
               </div>
             </div>
