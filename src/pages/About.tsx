@@ -96,36 +96,39 @@ function About() {
           direction="up"
           triggerOnce
         >
-          <div className="technologies  text-gray-200   lg:w-3/4 m-auto mt-32 mb-32 rounded-lg custom-bg">
+          <div className="technologies  text-gray-200   lg:w-3/4 m-auto mt-32 mb-32 rounded-lg ">
             <div className="shadow-lg backdrop-blur-lg p-10 bg-white/5">
-              <p className="text-4xl text-center m-5 font-semibold">Tech I use</p>
+              <p className="text-4xl text-center m-5 font-semibold dark:text-gray-200 text-gray-900 ">
+                Tech I use
+              </p>
               <div className="flex gap-36 w-1/2 m-auto p-10 justify-center">
-                <div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                <div className="flex flex-col gap-y-4">
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-yellow-400 dark:hover:text-yellow-400 custom-shadow-js">
                     <IoLogoJavascript />
                   </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-violet-500  dark:hover:text-violet-500 custom-shadow-bstrap">
                     <FaBootstrap />
                   </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-sky-500 dark:hover:text-sky-500 custom-shadow-react">
                     <FaReact />
                   </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-black dark:hover:text-black custom-shadow-next">
                     <TbBrandNextjs />
                   </div>
                 </div>
 
-                <div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                <div className="flex flex-col gap-y-4">
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-sky-500  dark:hover:text-sky-500 custom-shadow-tw">
                     <SiTailwindcss />
                   </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-black dark:hover:text-black custom-shadow-ex">
                     <SiExpress />
                   </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-green-500 dark:hover:text-green-500 custom-shadow-node">
                     <FaNodeJs />
                   </div>
-                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 hover:text-sky-500">
+                  <div className="p-3 text-4xl  hover:-translate-y-1 duration-300 text-green-600 dark:hover:text-green-600 custom-shadow-mongo">
                     <SiMongodb />
                   </div>
                 </div>
