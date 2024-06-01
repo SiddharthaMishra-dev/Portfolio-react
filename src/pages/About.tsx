@@ -74,7 +74,7 @@ function About() {
                   /&gt;
                 </p>
 
-                <div className="text-lg mt-4 tracking-normal">
+                <div className="text-lg mt-4 tracking-normal leading-8">
                   I am an undergraduate student with a passion for web development. Enjoy exploring
                   new technologies and using them. Always eager to work and collaborate with senior
                   and junior developers. Enthusiastic about learning and applying new technologies
@@ -155,7 +155,7 @@ function About() {
             // style={{ zIndex: 10 }}
             className="connect dark:text-gray-200 text-gray-900 p-10  mb-32  sm:w-full"
           >
-            <p className="text-3xl text-center m-5">Connect with me</p>
+            <p className="text-4xl font-semibold text-center m-5">Connect with me</p>
             <div className="follow flex flex-col items-center">
               <p className="p-5 dark:text-slate-400 text-slate-900 text-base">Follow me on </p>
               <ul className="flex gap-5 p-5">
