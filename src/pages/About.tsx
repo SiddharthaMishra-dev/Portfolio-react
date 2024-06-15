@@ -51,10 +51,17 @@ function About() {
             rotateYMax={3}
             highlight={false}
             rotateTouch="scroll-y"
+            className="relative"
           >
+            <div data-atropos-offset="-5">
+              <img
+                src="/atroposbg.jpg"
+                className="absolute"
+              />
+            </div>
             <div
               data-atropos-offset="0"
-              className="md:flex text-gray-900 dark:text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left md:pt-10"
+              className="md:flex text-gray-900 dark:text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left "
             >
               <img
                 src={Profile}
@@ -74,7 +81,7 @@ function About() {
                   /&gt;
                 </p>
 
-                <div className="text-lg mt-4 tracking-normal leading-8">
+                <div className="text-lg mt-4 tracking-normal leading-8 font-semibold">
                   I am an undergraduate student with a passion for web development. Enjoy exploring
                   new technologies and using them. Always eager to work and collaborate with senior
                   and junior developers. Enthusiastic about learning and applying new technologies
