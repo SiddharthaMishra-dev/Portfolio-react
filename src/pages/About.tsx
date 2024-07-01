@@ -29,10 +29,10 @@ function About() {
     setTimeout(() => setVisible(true), 5000);
     const typed = new Typed(desc.current, {
       strings: ["Frontend web developer", "Tech Enthusiast"],
-      typeSpeed: 25,
+      typeSpeed: 50,
       loop: true,
       loopCount: Infinity,
-      backSpeed: 20,
+      backSpeed: 50,
     });
     return () => {
       typed.destroy();
@@ -63,12 +63,12 @@ function About() {
               data-atropos-offset="0"
               className="md:flex text-gray-900 dark:text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left "
             >
-              <img
+              {/* <img
                 src={Profile}
                 className="rounded-md m-auto"
                 width="384"
                 height="512"
-              ></img>
+              ></img> */}
               <div className="side-content p-10">
                 <h4 className="text-2xl">Hey!</h4>
                 <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
@@ -76,16 +76,16 @@ function About() {
                   &lt;{" "}
                   <span
                     ref={desc}
-                    className="text-sky-500 text-3xl md:text-4xl"
+                    className="text-gray-200 text-3xl font-semibold md:text-4xl"
                   />{" "}
                   /&gt;
                 </p>
 
                 <div className="text-lg mt-4 tracking-normal leading-8 font-semibold">
-                  I am an undergraduate student with a passion for web development. Enjoy exploring
-                  new technologies and using them. Always eager to work and collaborate with senior
-                  and junior developers. Enthusiastic about learning and applying new technologies
-                  to provide the best solution.
+                  I am a learner with a passion for web development. Enjoy exploring new
+                  technologies and using them. Always eager to work and collaborate with senior and
+                  junior developers. Enthusiastic about learning and applying new technologies to
+                  provide the best solution.
                 </div>
                 <button className=" mt-4 mx-auto md:mx-0 md:mt-6 flex gap-x-3 text-2xl px-4 py-2 outline outline-sky-500 rounded-md hover:bg-blue-600 transition">
                   <a
