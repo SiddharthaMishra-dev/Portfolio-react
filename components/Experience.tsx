@@ -1,5 +1,5 @@
 import { useState } from "react";
-import experience from "../utils/data";
+import experience from "../lib/data";
 
 const Experience = () => {
   const [index, setIndex] = useState(0);
@@ -26,11 +26,17 @@ const Experience = () => {
       </div>
       <div className="job-item p-5 rounded-md mt-5">
         <p className="text-2xl text-sky-500 font-bold">
-          <span className=" text-gray-900 dark:text-gray-200">{experience[index].designation}</span>{" "}
+          <span className=" text-gray-900 dark:text-gray-200">
+            {experience[index].designation}
+          </span>{" "}
           @{experience[index].company}
         </p>
-        <p className="mt-2 text-gray-500 dark:text-gray-400 text-lg">{experience[index].tenure}</p>
-        <article className="mt-2 text-lg space-x-1">{experience[index].description}</article>
+        <p className="mt-2 text-gray-500 dark:text-gray-400 text-lg">
+          {experience[index].tenure}
+        </p>
+        <article className="mt-2 text-lg space-x-1">
+          {experience[index].description}
+        </article>
       </div>
     </div>
   );

@@ -1,24 +1,27 @@
 import { animated, useSpring } from "@react-spring/web";
 import Atropos from "atropos/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
-import { FaBootstrap, FaInstagram, FaLinkedin, FaNodeJs, FaReact } from "react-icons/fa";
+import {
+  FaBootstrap,
+  FaInstagram,
+  FaLinkedin,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
 import { IoLogoJavascript } from "react-icons/io";
 import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import "react-tabs/style/react-tabs.css";
 import Typed from "typed.js";
 
-import Profile from "../assets/Profile.jpg";
-import Experience from "../components/Experience";
-import Footer from "../components/Footer";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 
-// import "atropos/css";
+import "atropos/css";
 
 function About() {
-  const [isVisible, setVisible] = useState(false);
   const desc = useRef(null);
   const props = useSpring({
     from: { opacity: 0 },
@@ -26,7 +29,6 @@ function About() {
     config: { duration: 1000 },
   });
   useEffect(() => {
-    setTimeout(() => setVisible(true), 5000);
     const typed = new Typed(desc.current, {
       strings: ["Frontend web developer", "Tech Enthusiast"],
       typeSpeed: 50,
@@ -53,22 +55,11 @@ function About() {
             rotateTouch="scroll-y"
             className="relative"
           >
-            <div data-atropos-offset="-5">
-              <img
-                src="/atroposbg.jpg"
-                className="absolute"
-              />
-            </div>
+            <div data-atropos-offset="-5"></div>
             <div
               data-atropos-offset="0"
               className="md:flex text-gray-900 dark:text-gray-200 lg:w-full m-auto rounded-md shadow-sm items-center md:text-left "
             >
-              {/* <img
-                src={Profile}
-                className="rounded-md m-auto"
-                width="384"
-                height="512"
-              ></img> */}
               <div className="side-content p-10">
                 <h4 className="text-2xl">Hey!</h4>
                 <p className="text-sky-500 text-5xl mt-4">Siddhartha Mishra</p>
@@ -82,14 +73,15 @@ function About() {
                 </p>
 
                 <div className="text-lg mt-4 tracking-normal leading-8 font-semibold">
-                  I am a learner with a passion for web development. Enjoy exploring new
-                  technologies and using them. Always eager to work and collaborate with senior and
-                  junior developers. Enthusiastic about learning and applying new technologies to
+                  I am a learner with a passion for web development. Enjoy
+                  exploring new technologies and using them. Always eager to
+                  work and collaborate with senior and junior developers.
+                  Enthusiastic about learning and applying new technologies to
                   provide the best solution.
                 </div>
                 <button className=" mt-4 mx-auto md:mx-0 md:mt-6 flex gap-x-3 text-2xl px-4 py-2 outline outline-sky-500 rounded-md hover:bg-blue-600 transition">
                   <a
-                    href="https://drive.google.com/file/d/1LE6uvFEGpF66yH-rzDTtgj-dR4doeEiB/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1MBBAkBDu_E1CNsYcLAYahU8U3dsD0WJW/view?usp=sharing"
                     download="siddhartha_mishra.pdf"
                   >
                     Download Resume
@@ -99,10 +91,7 @@ function About() {
             </div>
           </Atropos>
         </div>
-        <Slide
-          direction="up"
-          triggerOnce
-        >
+        <Slide direction="up" triggerOnce>
           <div className="technologies  text-gray-200   lg:w-3/4 m-auto mt-32 mb-32 rounded-lg ">
             <div className="shadow-lg backdrop-blur-lg p-10 bg-white/5">
               <p className="text-4xl text-center m-5 font-semibold dark:text-gray-200 text-gray-900 ">
@@ -143,36 +132,36 @@ function About() {
             </div>
           </div>
         </Slide>
-        <Slide
-          direction="up"
-          triggerOnce
-        >
-          <animated.div
-            className="w-full"
-            style={props}
-          >
+        <Slide direction="up" triggerOnce>
+          <animated.div className="w-full" style={props}>
             <Experience />
           </animated.div>
         </Slide>
-        <Slide
-          direction="up"
-          triggerOnce
-        >
-          <div
-            // style={{ zIndex: 10 }}
-            className="connect dark:text-gray-200 text-gray-900 p-10  mb-32  sm:w-full"
-          >
-            <p className="text-4xl font-semibold text-center m-5">Connect with me</p>
+        <Slide direction="up" triggerOnce>
+          <div className="connect dark:text-gray-200 text-gray-900 p-10  mb-32  sm:w-full">
+            <p className="text-4xl font-semibold text-center m-5">
+              Connect with me
+            </p>
             <div className="follow flex flex-col items-center">
-              <p className="p-5 dark:text-slate-400 text-slate-900 text-base">Follow me on </p>
+              <p className="p-5 dark:text-slate-400 text-slate-900 text-base">
+                Follow me on{" "}
+              </p>
               <ul className="flex gap-5 p-5">
                 <li className="text-3xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
-                  <a href="https://twitter.com/raiderfreed">
+                  <a
+                    href="https://twitter.com/raiderfreed"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaXTwitter />
                   </a>
                 </li>
                 <li className="text-3xl hover:text-sky-500 cursor-pointer hover:-translate-y-1 duration-300">
-                  <a href="https://www.linkedin.com/in/siddhartha-mishra-628282203/">
+                  <a
+                    href="https://www.linkedin.com/in/siddhartha-mishra-628282203/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaLinkedin />
                   </a>
                 </li>
@@ -180,6 +169,7 @@ function About() {
                   <a
                     href="https://www.instagram.com/sid_mishra19/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <FaInstagram />
                   </a>

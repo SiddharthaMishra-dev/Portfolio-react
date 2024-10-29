@@ -1,8 +1,8 @@
 import { Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import Loading from "../components/Loading";
-import Nav from "../components/Nav";
+import Loading from "@/components/Loading";
+import Nav from "@/components/Nav";
 
 const Layout = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

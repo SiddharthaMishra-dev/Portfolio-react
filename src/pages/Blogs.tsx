@@ -3,8 +3,8 @@ import { Fade } from "react-awesome-reveal";
 import { PiDevToLogoFill } from "react-icons/pi";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import Footer from "../components/Footer";
-import Loading from "../components/Loading";
+import Footer from "@/components/Footer";
+import Loading from "@/components/Loading";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -15,9 +15,12 @@ const Blog = () => {
   const fetchArticles = async () => {
     try {
       setFetchingArticles(true);
-      const response = await fetch("https://dev.to/api/articles?username=sidddharthamishra", {
-        method: "GET",
-      });
+      const response = await fetch(
+        "https://dev.to/api/articles?username=sidddharthamishra",
+        {
+          method: "GET",
+        },
+      );
       const json = await response.json();
       setFetchingArticles(false);
       setBlogs(json);
@@ -47,13 +50,14 @@ const Blog = () => {
                       />
                     </div>
                     <div className="pt-2 p-4 md:text-left">
-                      <h5 className="text-sky-600 font-bold text-2xl items-center">{blog.title}</h5>
-                      <span className="pt-5 text-gray-800 dark:text-white">{blog.description}</span>
+                      <h5 className="text-sky-600 font-bold text-2xl items-center">
+                        {blog.title}
+                      </h5>
+                      <span className="pt-5 text-gray-800 dark:text-white">
+                        {blog.description}
+                      </span>
 
-                      <a
-                        href={blog.url}
-                        target="_blank"
-                      >
+                      <a href={blog.url} target="_blank" rel="noreferrer">
                         <PiDevToLogoFill className="mt-5 text-3xl text-gray-800 dark:text-white dark:hover:text-sky-200 hover:text-sky-500 md:me-auto" />
                       </a>
                     </div>
