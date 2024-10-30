@@ -1,29 +1,32 @@
-# Rsbuild Project
+## Portfolio
 
-## Setup
+### Link : [website](https://sidme-tech.netlify.app/)
 
-Install the dependencies:
+### Tech Stack
 
-```bash
-pnpm install
+- React
+- React Router
+- Atropos
+- React-spring
+- tailwindcss
+- shadcn-ui
+
+### Build and Package Manager
+
+- Build Tool : rsbuild
+- Bundles : rspack
+- Package Manager : bun
+
+### setup
+
+- clone this repository
+
+```
+bun i
 ```
 
-## Get Started
-
-Start the dev server:
-
-```bash
-pnpm dev
+```
+bun run dev
 ```
 
-Build the app for production:
-
-```bash
-pnpm build
-```
-
-Preview the production build locally:
-
-```bash
-pnpm preview
-```
+Open for contribution or use it as template.

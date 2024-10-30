@@ -4,7 +4,7 @@ import { pluginImageCompress } from '@rsbuild/plugin-image-compress';
 
 export default defineConfig({
   html: {
-    template: './public/index.html',
+    template: "./public/index.html",
   },
   plugins: [pluginReact(), pluginImageCompress()],
   
